@@ -10,7 +10,7 @@
 <body>
 <%@include file="menu.jsp" %>
 <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">로그인</h2>
+    <h2 class="pb-2 border-bottom"></h2>
 	<form action="#" method="get">
 			<div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="loginModal"
 		aria-labelledby="loginModalLabel" aria-hidden="true">
