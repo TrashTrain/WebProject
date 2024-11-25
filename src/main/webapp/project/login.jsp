@@ -5,7 +5,7 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인</title>
 </head>
 <body>
 <%@include file="menu.jsp" %>

@@ -67,4 +67,5 @@
         </div>
       </div>
     </div>
+    <%@include file="mainPageBody.jsp" %>
   </div>

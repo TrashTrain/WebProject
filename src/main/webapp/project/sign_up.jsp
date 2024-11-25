@@ -12,7 +12,7 @@
 <br><br><br><br><br><br>
 <div class="container">
 	<div class="row g-5">
-		<h4 class="mb-1">회원 가입</h4>
+		<h4 class="pb-2 border-bottom">회원 가입</h4>
 		<form class="sign_info">
 		<div class="row g-3">
             <div class="col-sm-6">
@@ -27,6 +27,26 @@
               <label for="username" class="form-label">아이디</label>
               <div class="input-group has-validation">
                 <input type="text" class="form-control" id="username" placeholder="아이디를 입력하세요." required="">
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+            <div></div>
+            <div class="col-6">
+              <label for="username" class="form-label">비밀번호</label>
+              <div class="input-group has-validation">
+                <input type="password" class="form-control" id="passwd" placeholder="비밀번호를 입력하세요." required="">
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+            <div></div>
+            <div class="col-6">
+              <label for="username" class="form-label">비밀번호 확인</label>
+              <div class="input-group has-validation">
+                <input type="password" class="form-control" id="passcheck" placeholder="비밀번호를 다시 한 번 입력하세요." required="">
               <div class="invalid-feedback">
                   Your username is required.
                 </div>
@@ -49,9 +69,11 @@
           </div>
           <br><br><br>
           <button class="w-50 btn btn-primary btn-lg" type="submit">회원가입</button>
+          <br><br><br><br>
           </div>
 		</form>
-	</div>
+	</div>	
 </div>
+
 </body>
 </html>
