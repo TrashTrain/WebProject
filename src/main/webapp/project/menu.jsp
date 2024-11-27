@@ -17,8 +17,20 @@
         </ul>
     
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./login.jsp'" >Login</button>
-          <button type="button" class="btn btn-warning" onclick="location.href='./sign_up.jsp'">Sign-up</button>
+        <%
+        	Object id = session.getAttribute("inputid");
+        	if(id == null){
+        %>
+	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./login.jsp'" >Login</button>
+	          <button type="button" class="btn btn-warning" onclick="location.href='./sign_up.jsp'">Sign-up</button>
+          <%
+        	}else{
+          %>
+	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./logout.jsp'" >Logout</button>
+	          <button type="button" class="btn btn-warning" onclick="">마이페이지</button>
+          <%
+          	}
+          	%>
         </div>
         
       </div>
