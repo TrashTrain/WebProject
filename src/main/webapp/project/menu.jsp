@@ -21,13 +21,13 @@
         	Object id = session.getAttribute("inputid");
         	if(id == null){
         %>
-	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./login.jsp'" >Login</button>
-	          <button type="button" class="btn btn-warning" onclick="location.href='./sign_up.jsp'">Sign-up</button>
+	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./login.jsp'" >로그인</button>
+	          <button type="button" class="btn btn-warning" onclick="location.href='./sign_up.jsp'">회원가입</button>
           <%
         	}else{
           %>
-	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./logout.jsp'" >Logout</button>
-	          <button type="button" class="btn btn-warning" onclick="">마이페이지</button>
+	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./logout.jsp'" >로그아웃</button>
+	          <button type="button" class="btn btn-warning" onclick="location.href='./myPage.jsp'">마이페이지</button>
           <%
           	}
           	%>
