@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="../resources/js/validation.js"></script>
 <meta charset="UTF-8">
 <title>회원 가입</title>
@@ -24,7 +23,7 @@
 							<div class="row g-5">
 								<div class="row g-3">
 									<div class="col-sm-6">
-										<label for="firstName" class="form-label">닉네임</label> <input
+										<label for="username" class="form-label">닉네임</label> <input
 											type="text" class="form-control" name="username" id="username"
 											placeholder="이름을 입력하세요." value="" required="">
 										<div class="invalid-feedback">Valid first name is
@@ -32,7 +31,7 @@
 									</div>
 									<div></div>
 									<div class="col-6">
-										<label for="username" class="form-label">아이디</label>
+										<label for="id" class="form-label">아이디</label>
 										<div class="input-group has-validation">
 											<input type="text" class="form-control" name="id"id="id"
 												placeholder="아이디를 입력하세요." required="">

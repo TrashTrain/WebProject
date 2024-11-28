@@ -5,3 +5,14 @@ CREATE TABLE MEMBERS(
 	email VARCHAR(30)
 );
 
+CREATE TABLE Recommend(
+	number INT(10) PRIMARY KEY,
+	title VARCHAR(50) NOT NULL,
+	script VARCHAR(300) NOT NULL
+);
+
+CREATE TABLE Question(
+	number INT(10) PRIMARY KEY,
+	title VARCHAR(50) NOT NULL,
+	script VARCHAR(300) NOT NULL
+);

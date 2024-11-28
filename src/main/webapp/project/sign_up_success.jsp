@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -13,7 +12,7 @@
 	request.setCharacterEncoding("utf-8");
 	
 	String username=request.getParameter("username");
-	String id=request.getParameter("id");
+	String rid=request.getParameter("id");
 	String passwd=request.getParameter("passwd");
 	String passcheck=request.getParameter("passcheck");
 	String email=request.getParameter("email");
@@ -24,7 +23,7 @@
 	try{
 		String sql="INSERT INTO Members(id, name, passwd, email, info) VALUES(?,?,?,?,?)";
 		pstmt=conn.prepareStatement(sql);
-		pstmt.setString(1, id);
+		pstmt.setString(1, rid);
 		pstmt.setString(2, username);
 		pstmt.setString(3, passwd);
 		pstmt.setString(4, email);

@@ -54,5 +54,36 @@ function CheckSignUp() {
 		return false;
 	}
 
-	 document.checkSign.submit()
+	 document.checkSign.submit();
+}
+function CheckWrite(){
+	var title = document.getElementById("title");
+	var script = document.getElementById("script");
+	
+	if (title.value.length < 1) {
+		alert("제목을 입력하세요.");
+		title.select();
+		title.focus();
+		return false;
+	} else if (title.value.length > 20) {
+		alert("제목은 20글자 아래로 입력해주세요.");
+		title.select();
+		title.focus();
+		return false;
+	}
+	
+	if (script.value.length < 1) {
+		alert("내용을 입력하세요.");
+		script.select();
+		script.focus();
+		return false;
+	} else if (script.value.length > 300) {
+		alert("내용은 300글자 아래로 입력해주세요.");
+		script.select();
+		script.focus();
+		return false;
+	}
+	
+	document.checkwrite.submit();
+
 }
