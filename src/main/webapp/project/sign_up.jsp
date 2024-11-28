@@ -70,12 +70,6 @@
 												email address for shipping updates.</div>
 										</div>
 
-
-										<div class="col-md-12">
-											<label class="form-label">자기소개</label>
-											<textarea rows="5" cols="5" class="form-control" wrap="hard"
-												id="self" name="self" placeholder="자신을 소개해보세요!"style="resize: none;"></textarea>
-										</div>
 									</div>
 									<br>
 									<br>

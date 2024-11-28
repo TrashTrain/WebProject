@@ -24,6 +24,7 @@
 			id = rs.getString("id");
 			String username = rs.getString("name");
 			session.setAttribute("inputid", id);
+			session.setAttribute("passwd", pw);
 			response.sendRedirect("mainPage.jsp");
 		}else{
 			request.setAttribute("errorMessage", "로그인 정보가 올바르지 않습니다.");

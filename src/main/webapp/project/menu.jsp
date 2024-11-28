@@ -27,7 +27,7 @@
         	}else{
           %>
 	          <button type="button" class="btn btn-outline-light me-2" onclick="location.href='./logout.jsp'" >로그아웃</button>
-	          <button type="button" class="btn btn-warning" onclick="location.href='./myPage.jsp'">마이페이지</button>
+	          <button type="button" class="btn btn-warning" onclick="location.href='./getInfo.jsp'">마이페이지</button>
           <%
           	}
           	%>
