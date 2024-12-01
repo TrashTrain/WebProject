@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
-	<form name="checkwrite" id="checkwrite" action="#" method="post">
+	<form name="checkwrite" id="checkwrite" action="./addWriting.jsp" method="post" enctype="multipart/form-data">
 		<div class="container px-4 py-5">
 			<div class="p-5 mb-4 bg-body-tertiary rounded-3">
 				<div class="container-fluid py-5">
@@ -47,7 +47,7 @@
 			<div class="form-group row">
 				<label for="fileUpload" class="col-sm-2 text-sm-right">파일 첨부</label>
 				<div class="col-sm-8">
-					<input type="file" id="fileUpload" class="form-control-file border">
+					<input type="file" name="filename" id="fileUpload" class="form-control-file border">
 				</div>
 			</div>
 			<hr class="col-sm-10">

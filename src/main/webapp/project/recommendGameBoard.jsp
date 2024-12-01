@@ -1,3 +1,8 @@
+<%@page import="dao.QuestionBoardRepository"%>
+<%@page import="dto.QuestionBoard"%>
+<%@page import="dao.RecommendBoardRepository"%>
+<%@page import="dto.RecommendBoard"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,6 +11,17 @@
 <meta charset="UTF-8">
 <title>추천 게시판</title>
 </head>
+<script>
+function CheckLogin() {
+	<%Object qid = session.getAttribute("inputid");
+	if (qid == null) {%>
+		alert("로그인 후에 이용 가능합니다.");
+	<%	
+	} else {%>
+		location.href="writingPage.jsp";
+	<%}%>
+}
+</script>
 <body>
 <%@ include file="menu.jsp" %>
 <div class="container py-4">
@@ -25,22 +41,47 @@
 					<a href="#"
 					class="btn btn-secondary">전체글</a>
 					</td>
-					<td align="right"><a href="./writingPage.jsp" class="btn btn-success">글쓰기</a></td>
+					<td align="right"><button onclick="CheckLogin()" class="btn btn-success">글쓰기</button></td>
 				</tr>
 			</table>
 		</div>
 		<div style="padding-top: 50px">
-		<table class="table table-hover">
+		<table style = "width:100%" class="table table-hover">
 			<tr>
-				<th>도서</th>
-				<th>가격</th>
-				<th>수량</th>
-				<th>소계</th>
-				<th>비고</th>
+				<th style="width:10%">No.</th>
+				<th style="width:60%">제목</th>
+				<th>글쓴이</th>
+				<th>추천수</th>
+				<th>조회수</th>
 			</tr>
+			<%
+				ArrayList<RecommendBoard> rboard = RecommendBoardRepository.getInstance().getAllBoard();
+				
+				for(RecommendBoard a : rboard){
+			%>
+			
+			<tr>
+				<td><%=a.getNum() %></td>
+				<td><a href="contentView.jsp?postID=<%=a.getNum() %>" style="color:black"><%=a.getTitle() %></a></td>
+				<td><%=a.getUsername() %></td>
+				<td><%=0 %></td>
+				<td><%=0 %></td>
+			</tr>
+			
+			<%} %>
 		</table>
-		<a href="#" class="btn btn-secondary">&laquo; 쇼핑 계속하기</a>
-		</div>
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled"><a class="page-link">Previous</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">Next</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 	</div>
 </div>
 </body>

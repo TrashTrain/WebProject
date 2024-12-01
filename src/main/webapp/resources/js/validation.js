@@ -27,7 +27,10 @@ function CheckSignUp() {
 		passwd.select();
 		passwd.focus();
 		return false;
-	}
+	}else if(!check(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[~?!@#$%^&*_-]).{8,}$/, passwd,
+		"특수문자, 숫자, 문자가 모두 포함되어야 합니다.")){
+			return false;
+		}
 
 	// 비밀번호 재확인 체크
 	if (passcheck.value!=passwd.value) {
@@ -57,8 +60,14 @@ function CheckSignUp() {
 	 document.checkSign.submit();
 }
 function CheckWrite(){
+	var category = document.getElementById("category");
 	var title = document.getElementById("title");
 	var script = document.getElementById("script");
+	
+	if(category.value.length < 1){
+		alert("게시판을 선택해주세요.");
+		return false;
+	}
 	
 	if (title.value.length < 1) {
 		alert("제목을 입력하세요.");
@@ -87,3 +96,4 @@ function CheckWrite(){
 	document.checkwrite.submit();
 
 }
+

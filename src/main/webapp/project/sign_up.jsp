@@ -26,8 +26,7 @@
 										<label for="username" class="form-label">닉네임</label> <input
 											type="text" class="form-control" name="username" id="username"
 											placeholder="이름을 입력하세요." value="" required="">
-										<div class="invalid-feedback">Valid first name is
-											required.</div>
+										
 									</div>
 									<div></div>
 									<div class="col-6">
@@ -35,8 +34,7 @@
 										<div class="input-group has-validation">
 											<input type="text" class="form-control" name="id"id="id"
 												placeholder="아이디를 입력하세요." required="">
-											<div class="invalid-feedback">Your username is
-												required.</div>
+											
 										</div>
 									</div>
 									<div></div>
@@ -45,8 +43,7 @@
 										<div class="input-group has-validation">
 											<input type="password" class="form-control" name="passwd" id="passwd"
 												placeholder="비밀번호를 입력하세요." required="">
-											<div class="invalid-feedback">Your username is
-												required.</div>
+											
 										</div>
 									</div>
 									<div></div>
@@ -55,8 +52,7 @@
 										<div class="input-group has-validation">
 											<input type="password" class="form-control" name="passcheck" id="passcheck"
 												placeholder="비밀번호를 다시 한 번 입력하세요." required="">
-											<div class="invalid-feedback">Your username is
-												required.</div>
+											
 										</div>
 									</div>
 									<div>
@@ -65,8 +61,7 @@
 												class="text-body-secondary">(Optional)</span></label> <input
 												type="email" class="form-control" name="email" id="email"
 												placeholder="you@example.com">
-											<div class="invalid-feedback">Please enter a valid
-												email address for shipping updates.</div>
+											
 										</div>
 
 									</div>
